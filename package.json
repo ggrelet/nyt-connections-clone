@@ -5,8 +5,8 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "export": "next build",
-    "deploy": "gh-pages -d out --dotfiles",
+    "export": "NEXT_PUBLIC_BASE_PATH=/nyt-connections-clone next build",
+    "deploy": "npm run export && gh-pages -d out --dotfiles",
     "start": "next start",
     "lint": "next lint"
   },
